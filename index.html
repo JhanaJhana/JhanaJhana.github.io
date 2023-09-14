@@ -58,6 +58,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -78,6 +81,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+  </ul>
+</nav>
 
 
 
@@ -118,6 +125,11 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/JhanaJhana" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;JhanaJhana" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
 
         </div>
       </div>
@@ -167,11 +179,31 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-09-10 15:56:44 / Modified: 15:57:57" itemprop="dateCreated datePublished" datetime="2023-09-10T15:56:44+08:00">2023-09-10</time>
+      <time title="Created: 2023-09-10 15:56:44" itemprop="dateCreated datePublished" datetime="2023-09-10T15:56:44+08:00">2023-09-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-14 23:40:15" itemprop="dateModified" datetime="2023-09-14T23:40:15+08:00">2023-09-14</time>
     </span>
 
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/09/10/Article/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/09/10/Article/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 </div>
 
@@ -226,7 +258,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/08/hello-world/" class="post-title-link" itemprop="url">First Article</a>
+          <a href="/2023/09/08/hello-world/" class="post-title-link" itemprop="url">Ｈexo & Github</a>
         </h2>
 
         <div class="post-meta-container">
@@ -244,9 +276,23 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-10 15:56:31" itemprop="dateModified" datetime="2023-09-10T15:56:31+08:00">2023-09-10</time>
+      <time title="Modified: 2023-09-15 00:05:01" itemprop="dateModified" datetime="2023-09-15T00:05:01+08:00">2023-09-15</time>
     </span>
 
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/09/08/hello-world/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/09/08/hello-world/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 </div>
 
@@ -257,20 +303,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>使用環境：Node.js<br>優點：<br>    1. 可使用Markdown<br>    2. 豐富的主題 (此網站使用主題NexT)<br>    3. 官方有中文說明文件<br>    4. 強大的外掛系統</p>
+<ul>
+<li>Node.js使Javascript從前端延伸到後端，<a target="_blank" rel="noopener" href="https://progressbar.tw/posts/291">讓電腦可以用 Command line 的方式執行 JavaScript</a></li>
+</ul>
+<hr>
+<h2 id="Download-Node-js-Git"><a href="#Download-Node-js-Git" class="headerlink" title="Download: Node.js &amp; Git"></a>Download: Node.js &amp; Git</h2><p>電腦需先安裝Node.js 和 Git</p>
+<h2 id="Download-Hexo"><a href="#Download-Hexo" class="headerlink" title="Download: Hexo"></a>Download: Hexo</h2><p>在終端機上下載hexo </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<ul>
+<li>npm（node package manager）為node.js的套件管理工具</li>
+</ul>
+<hr>
+<h2 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h2><p>從本機端啟動伺服器 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="Deploy-on-Github"><a href="#Deploy-on-Github" class="headerlink" title="Deploy on Github"></a>Deploy on Github</h1><ul>
+<li>github：可以存放靜態網頁，用.github.io的子網域<br>創建Github帳戶, 並創建新的Repository(儲存庫)<br>回到_config.yml檔案中的Deployment，更改相對應Repository的網址 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Deployment:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/用戶名/用戶名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+更改後再回到終端機上，把內容deploy到Github上面	<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo deploy </span><br></pre></td></tr></table></figure>
+–&gt;More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></li>
+</ul>
+<h2 id="改主題"><a href="#改主題" class="headerlink" title="改主題"></a>改主題</h2><p>假設改成一個主題叫NexT</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i hexo-theme-next </span><br></pre></td></tr></table></figure>
+<p>再到_config.yml中的theme更改成next </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<ul>
+<li>選擇NexT: 很有名、簡潔清楚、有在維護、有很多可以改的地方</li>
+</ul>
+<p> 	</p>
+<h1 id="引入外掛系統"><a href="#引入外掛系統" class="headerlink" title="引入外掛系統"></a>引入外掛系統</h1><p>選擇Disqus讓每一篇文章下方都可以有留言功能<br>去<a target="_blank" rel="noopener" href="https://disqus.com/">Disque的官網</a>創帳號，並命名shortname<br>回到_config.yml檔案中，找到Disqus，把enable改成true</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  shortname: 創建Disque時設定的shortname</span><br><span class="line">  count: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>此時，每一篇文章下方都會有留言功能。<br>但是！Menu中的頁面（例如：About）也都會出現留言功能！<br>因此，需找到其他不需要留言功能的頁面index.md檔案中的Front-matter，修改comment設定。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: About</span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -342,6 +407,8 @@
 
 
 
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"JhanaJhana","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>
