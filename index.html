@@ -276,7 +276,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 00:06:48" itemprop="dateModified" datetime="2023-09-15T00:06:48+08:00">2023-09-15</time>
+      <time title="Modified: 2023-09-15 13:28:09" itemprop="dateModified" datetime="2023-09-15T13:28:09+08:00">2023-09-15</time>
     </span>
 
   
@@ -314,15 +314,22 @@
 <ul>
 <li>npm（node package manager）為node.js的套件管理工具</li>
 </ul>
+<h2 id="Create-the-file"><a href="#Create-the-file" class="headerlink" title="Create the file"></a>Create the file</h2><p>創建一個文件夾</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myblog</span><br></pre></td></tr></table></figure>
+<p>並移到那個資料夾 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> myblog</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h2><p>從本機端啟動伺服器 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <h1 id="Deploy-on-Github"><a href="#Deploy-on-Github" class="headerlink" title="Deploy on Github"></a>Deploy on Github</h1><ul>
-<li>github：可以存放靜態網頁，用.github.io的子網域<br>創建Github帳戶, 並創建新的Repository(儲存庫)<br>回到_config.yml檔案中的Deployment，更改相對應Repository的網址 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Deployment:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/用戶名/用戶名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-更改後再回到終端機上，把內容deploy到Github上面	<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo deploy </span><br></pre></td></tr></table></figure>
-–&gt;More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></li>
+<li>github：可以存放靜態網頁，用.github.io的子網域</li>
 </ul>
+<p>創建Github帳戶, 並創建新的Repository(儲存庫)<br>回到_config.yml檔案中的Deployment，更改相對應Repository的網址 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Deployment:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/用戶名/用戶名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>更改後再回到終端機上，把內容deploy到Github上面	</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo deploy </span><br></pre></td></tr></table></figure>
+<p>–&gt;More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 <h2 id="改主題"><a href="#改主題" class="headerlink" title="改主題"></a>改主題</h2><p>假設改成一個主題叫NexT</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i hexo-theme-next </span><br></pre></td></tr></table></figure>
 <p>再到_config.yml中的theme更改成next </p>
