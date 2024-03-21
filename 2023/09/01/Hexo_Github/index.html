@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="放暑假看了很多分享NLP的blog之後想想，咦！要不我也來搭建一個人網誌吧！！  前言： 雖然已經有 HackMD，但在 HackMD 上面主要寫自己上線上課程還有線下在校修課的Learning Notes。因此決定要一個自己的網站，預計可以作為分享閱讀心得或小專案分享使用。  第一篇就決定是：如何用Hexo和Github搭建網站！Q: 為什麼選Hexo呢？  核心原因是因為想要一個乾淨簡潔的網誌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用 Hexo 和 Github 搭建個人網誌">
+<meta property="og:url" content="http://example.com/2023/09/01/Hexo_Github/index.html">
+<meta property="og:site_name" content="JhanaJhana">
+<meta property="og:description" content="放暑假看了很多分享NLP的blog之後想想，咦！要不我也來搭建一個人網誌吧！！  前言： 雖然已經有 HackMD，但在 HackMD 上面主要寫自己上線上課程還有線下在校修課的Learning Notes。因此決定要一個自己的網站，預計可以作為分享閱讀心得或小專案分享使用。  第一篇就決定是：如何用Hexo和Github搭建網站！Q: 為什麼選Hexo呢？  核心原因是因為想要一個乾淨簡潔的網誌">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-21T16:06:41.658Z">
+<meta property="article:author" content="Jhan">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/09/01/Hexo_Github/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/09/01/Hexo_Github/","path":"2023/09/01/Hexo_Github/","title":"如何用 Hexo 和 Github 搭建個人網誌"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何用 Hexo 和 Github 搭建個人網誌 | JhanaJhana</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">JhanaJhana</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E5%B0%B1%E6%B1%BA%E5%AE%9A%E6%98%AF%EF%BC%9A%E5%A6%82%E4%BD%95%E7%94%A8Hexo%E5%92%8CGithub%E6%90%AD%E5%BB%BA%E7%B6%B2%E7%AB%99%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">第一篇就決定是：如何用Hexo和Github搭建網站！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">2.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step1-Download"><span class="nav-number">2.1.</span> <span class="nav-text">Step1: Download</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Node-js-Git"><span class="nav-number">2.1.1.</span> <span class="nav-text">Node.js &amp; Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo-1"><span class="nav-number">2.1.2.</span> <span class="nav-text">Hexo</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step2-Create-the-file"><span class="nav-number">2.2.</span> <span class="nav-text">Step2: Create the file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step3-Run-server"><span class="nav-number">2.3.</span> <span class="nav-text">Step3: Run server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theme"><span class="nav-number">3.</span> <span class="nav-text">Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-on-Github"><span class="nav-number">4.</span> <span class="nav-text">Deploy on Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-repository"><span class="nav-number">4.1.</span> <span class="nav-text">Create a repository</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bonus-%E5%BC%95%E5%85%A5%E5%A4%96%E6%8E%9B%E7%B3%BB%E7%B5%B1"><span class="nav-number">5.</span> <span class="nav-text">Bonus: 引入外掛系統</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jhan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/JhanaJhana" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;JhanaJhana" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/01/Hexo_Github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jhan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JhanaJhana">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何用 Hexo 和 Github 搭建個人網誌 | JhanaJhana">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何用 Hexo 和 Github 搭建個人網誌
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-09-01 08:00:00" itemprop="dateCreated datePublished" datetime="2023-09-01T08:00:00+08:00">2023-09-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-22 00:06:41" itemprop="dateModified" datetime="2024-03-22T00:06:41+08:00">2024-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Website/" itemprop="url" rel="index"><span itemprop="name">Website</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/09/01/Hexo_Github/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/09/01/Hexo_Github/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>放暑假看了很多分享NLP的blog之後想想，咦！要不我也來搭建一個人網誌吧！！</p>
+<ul>
+<li><strong>前言：</strong> 雖然已經有 HackMD，但在 HackMD 上面主要寫自己上線上課程還有線下在校修課的Learning Notes。因此決定要一個自己的網站，預計可以作為分享閱讀心得或小專案分享使用。</li>
+</ul>
+<h2 id="第一篇就決定是：如何用Hexo和Github搭建網站！"><a href="#第一篇就決定是：如何用Hexo和Github搭建網站！" class="headerlink" title="第一篇就決定是：如何用Hexo和Github搭建網站！"></a>第一篇就決定是：如何用Hexo和Github搭建網站！</h2><pre><code>Q: 為什麼選Hexo呢？
+</code></pre>
+<p>核心原因是因為想要一個乾淨簡潔的網誌，在看了網路許多分享，發現我喜歡的風格都是使用 Hexo 搭建的！<br>所以進一步了解，又發現了以下的優點：</p>
+<ol>
+<li>可以使用 Markdown 語法！程式碼可以很簡潔的顯示。</li>
+<li>方便的外掛系統。</li>
+<li>有豐富簡潔、內容清晰排版的主題可以選擇。</li>
+<li>可以放在 Github 的儲存庫。</li>
+<li>而且免費。</li>
+<li>想要嘗試看看大名鼎鼎的 Node.js 。</li>
+</ol>
+<p>所以首先可以先去了解了一下 <a target="_blank" rel="noopener" href="https://tw.alphacamp.co/blog/node-js-and-javascript">Node.js</a></p>
+<ul>
+<li>Node.js 使 Javascript 從前端延伸到後端，<a target="_blank" rel="noopener" href="https://progressbar.tw/posts/291">讓電腦可以用 Command line 的方式執行 JavaScript</a></li>
+</ul>
+<hr>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="Step1-Download"><a href="#Step1-Download" class="headerlink" title="Step1: Download"></a>Step1: Download</h3><p>第一步是需要先下載相關的套件，Node.js 和 Git 皆是使用 Hexo 時需要用到的。</p>
+<ul>
+<li><h4 id="Node-js-Git"><a href="#Node-js-Git" class="headerlink" title="Node.js &amp; Git"></a>Node.js &amp; Git</h4><p>  電腦需先安裝 Node.js 和 Git</p>
+</li>
+<li><h4 id="Hexo-1"><a href="#Hexo-1" class="headerlink" title="Hexo"></a>Hexo</h4><p>  在終端機上下載 Hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>npm</strong>（node package manager）為 node.js 的套件管理工具</p>
+</li>
+</ul>
+<h3 id="Step2-Create-the-file"><a href="#Step2-Create-the-file" class="headerlink" title="Step2: Create the file"></a>Step2: Create the file</h3><p>接著要創建一個文件夾，並把位置移到資料夾中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog <span class="comment">#建立叫 myblog 的資料夾</span></span><br><span class="line"><span class="built_in">cd</span> myblog  <span class="comment"># 切換位置到叫做 myblog 的資料夾</span></span><br></pre></td></tr></table></figure>
+<h3 id="Step3-Run-server"><a href="#Step3-Run-server" class="headerlink" title="Step3: Run server"></a>Step3: Run server</h3><p>接著就可以從從本機端啟動伺服器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>然後就可以在瀏覽器打開 <code>http://localhost:4000</code></p>
+<h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p>接下來就可以選擇自己喜歡主題格式！<a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">Hexo的官網主題</a>裡面有非常多的主題提供選擇。</p>
+<p>首先可以先看到 Hexo這個專案資料夾下的結構：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── _config.yml  </span><br><span class="line">├── package.json  </span><br><span class="line">├── scaffolds  </span><br><span class="line">├── source  </span><br><span class="line">| ├── _drafts  </span><br><span class="line">| └── _posts  </span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>_config.yml 中可以調整版面的大部分配置（可<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/configuration">參考官網</a>），包含主題也可以在這個資料夾裡面做調整。</p>
+<p>我最後選擇的主題叫 NexT，因此以下就拿這一個來示範：<br>首先先下載我選擇的主題</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/myblog <span class="comment">#先切換到blog的資料夾裡</span></span><br><span class="line">npm i hexo-theme-next <span class="comment">#主題名稱不可以大寫</span></span><br></pre></td></tr></table></figure>
+
+<p>再到 _config.yml 中的 theme 更改成next</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next <span class="comment">#主題名稱不可以大寫</span></span><br></pre></td></tr></table></figure>
+
+<p>再啟動一次伺服器就可以看到更換後的主題囉</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>Note: 要選哪一個樣式好呢？簡直是選擇障礙！</p>
+<p>  最後選定的主題叫做 NexT ，如果有在看別人的個人網誌，其實可以發現這是一個常見的主題。<br>  一開始想著我要簡潔大方的潔白主題，簡單明瞭易讀性高即可，但同時又想說想要一個不太常見的，所以NexT 並不是我的第一首選。<br>  可是！試了很多個之後才發現，其實一些小眾一點的主題年久失修啊。所以最後試了幾個，試到 NexT 發現這個很好上手，持續有在維護，畫面也很簡潔。（：啊～果然這主題這個多人用）</p>
+</li>
+</ul>
+<h2 id="Deploy-on-Github"><a href="#Deploy-on-Github" class="headerlink" title="Deploy on Github"></a>Deploy on Github</h2><p>Hexo 部署的方式有很多種，這裡選擇了常見、方便的方法：Github （可以存放靜態網頁，用 <code>.github.io</code> 的子網域）。</p>
+<h3 id="Create-a-repository"><a href="#Create-a-repository" class="headerlink" title="Create a repository"></a>Create a repository</h3><p>首先得創建一個 <a target="_blank" rel="noopener" href="https://github.com/">Github 帳戶</a> ，並創建新的 Repository(儲存庫)。</p>
+<p>Repository 要命名為 <code>&lt;github-username&gt;.github.io</code>  ，並且設定為 public。</p>
+<p>首先得先<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">部署外掛</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>回到_config.yml檔案中的 Deployment，把 repository 後加上剛剛在 Github 中創建的 Repository網址。（格式：<code>https://github.com/用戶名/用戶名.github.io.git</code>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Deployment:</span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line">repository: https://github.com/用戶名/用戶名.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+<p>再回到終端機上，就可以把內容 deploy 到 Github 上面囉！</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">更多 Deployment 的相關資訊</a></p>
+<ul>
+<li><p>Note: GitHub 不支援密碼驗證上傳解決方案<br>  如果參考的內容是比較久以前的文章，加上又跟我一樣是github新手，可能會遇到以下錯誤提示：<br>  <code>Support for password authentication was removed.</code><br>  <code>Please use personal access token instead</code></p>
+<p>  其實錯誤提示寫得非常潛顯易懂，所以也不用太緊張啦～只要 Github personal access token 就可以了。<br>  <a target="_blank" rel="noopener" href="https://peterpowerfullife.com/blog/github-shut-down-password/">可以參考這篇文章</a></p>
+</li>
+</ul>
+<h2 id="Bonus-引入外掛系統"><a href="#Bonus-引入外掛系統" class="headerlink" title="Bonus: 引入外掛系統"></a>Bonus: 引入外掛系統</h2><p><code>開始認真編輯網頁之後就發現：</code><br><code>沒有辦法互動耶！不像是HackMD有可以留言的地方，這裡找不到可以留言的地方，這樣就無法和來我網站的人互動。</code></p>
+<p>想來想去，就上網看看大家都怎麼解決這件事，發現許多人都有一樣的想法。<br>因此最後我又引入外掛的留言程式，讓每一篇文章下方都可以有留言功能。<br>評比了多個程式之後，覺得 Disqus 長得最順眼簡潔，符合我的網誌期望的風格（而且免費！）。<br><a target="_blank" rel="noopener" href="https://www.techcoke.com/2013/11/blogger-quick-installation-disqus-message-board.html">https://www.techcoke.com/2013/11/blogger-quick-installation-disqus-message-board.html</a></p>
+<p>首先，一樣得先創一個新帳號 （<a target="_blank" rel="noopener" href="https://disqus.com/">Disqus的官網</a>）並命名 shortname。</p>
+<p>接著回到 _config.yml 檔案中，找到 disqus，把 enable 改成<code>true</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">disqus:</span><br><span class="line"><span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">shortname: 創建Disqus時設定的shortname</span><br><span class="line">count: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>此時，每一篇文章下方都會有留言功能啦！</p>
+<ul>
+<li><p>Note: 如果只是單純這樣改，會發現Menu中的頁面（例如：About）也都會出現留言功能。</p>
+<p>  因此，需找到其他不需要留言功能的頁面 <code>index.md</code> 檔案中的 <code>Front-matter</code>，修改 <code>comment</code> 設定。</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: About</span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://chanchandev.com/note/Hexo/hexo-introduction/2335841689/">Reference</a></p>
+<p>所以有什麼問題，都歡迎在下面留言唷～</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/blog/" rel="tag"># blog</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/09/10/Lab_session_tutorial%20/" rel="next" title="通識課助教 Lab session tutorial">
+                  通識課助教 Lab session tutorial <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jhan</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"JhanaJhana","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
